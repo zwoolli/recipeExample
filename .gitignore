@@ -1,0 +1,8 @@
+src/.vscode
+obj/
+src/node_modules/
+src/wwwroot/
+src/appsettings*
+bin/
+src/package-lock.json
+src/Properties
