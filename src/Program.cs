@@ -6,15 +6,18 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IDbConfiguration, DbConfiguration>();
+builder.Services.AddSingleton<IRecipeRepository, RecipeRepository>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 WebApplication app = builder.Build();
 
-if(!app.Environment.IsDevelopment())
+if(app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
-app.UseRouting();
+app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();

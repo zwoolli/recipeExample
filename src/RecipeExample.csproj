@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="dapper" Version="2.0.123" />
     <PackageReference Include="npgsql" Version="6.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.2" />
   </ItemGroup>
 
 </Project>

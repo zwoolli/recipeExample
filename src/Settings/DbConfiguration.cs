@@ -8,7 +8,7 @@ public class DbConfiguration : IDbConfiguration
 
     public DbConfiguration(IConfiguration configuration)
     {
-        _connectionString = configuration.GetConnectionString("recipe");
+        _connectionString = configuration.GetConnectionString("recipeexample");
         if (string.IsNullOrWhiteSpace(_connectionString)) throw new ArgumentNullException(nameof(_connectionString));
     }
 
