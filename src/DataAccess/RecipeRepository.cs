@@ -25,7 +25,7 @@ public class RecipeRepository : Repository<Recipe>, IRecipeRepository
         string sql = $@"
                         SELECT  *
                         FROM    {nameof(Recipe)}
-                        WHERE   {nameof(Recipe)}.{nameof(Recipe.name)} = @{nameof(name)}";
+                        WHERE   {nameof(Recipe)}.{nameof(Recipe.name_1)} = @{nameof(name)}";
         
         using (IDbConnection connection = Open())
         {
